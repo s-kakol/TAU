@@ -1,0 +1,14 @@
+{
+  "name": "tau-lab-01",
+  "version": "1.0.0",
+  "description": "Introduction - Unit tests.",
+  "main": "src/quadratic.js",
+  "scripts": {
+    "test": "jest ./test/"
+  },
+  "author": "s20163",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
