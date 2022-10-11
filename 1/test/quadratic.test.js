@@ -40,7 +40,7 @@ describe('Tests that should return answers', () => {
 
 describe('Tests that should throw errors', () => {
   test('Throws Incorrect Values error if any input is not an instance of a number', () => {
-    expect(() => solveQuadratic(4, 'b', 2)).toThrowError(new Error('Incorrect values provided'));
+    expect(() => solveQuadratic(4, 'b', 2)).toThrowError('Incorrect values provided');
   });
 
   test('Throws error if \'a\' is equal to 0', () => {
