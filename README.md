@@ -7,3 +7,4 @@ Code is written in JS.
   * 3 ) Two simple scenarios using Selenium Webdriver
   * 4 ) Usage of mocks in testing
   * 5 ) Simple CI/CD
+  * 6 ) Labyrinth CLI game tests
