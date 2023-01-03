@@ -1,0 +1,18 @@
+{
+  "name": "tau-lab-06",
+  "version": "1.0.0",
+  "description": "Labyrinth",
+  "main": "src/labyrinth.js",
+  "scripts": {
+    "test": "jest ./test/",
+    "start": "node src/main.js"
+  },
+  "author": "s20163",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
