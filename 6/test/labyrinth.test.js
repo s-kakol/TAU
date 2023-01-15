@@ -14,18 +14,16 @@ afterAll(() => {
 
 describe('Functionality tests', () => {
   test('Moving to empty tiles works correctly', () => {
-    const { startX, startY } = labyrinth.checkPosition();
+    const startPos = labyrinth.checkPosition();
     labyrinth.move('left');
-    const { newX, newY } = labyrinth.checkPosition();
-
-    expect(newX).toEqual(startX);
-    expect(newY + 1).toEqual(startY + 1);
+    const newPos = labyrinth.checkPosition();
+    expect(newPos.X).toEqual(startPos.X - 1);
+    expect(newPos.Y).toEqual(startPos.Y);
   });
 
   test('Teleporting to empty tiles works correctly', () => {
     labyrinth.teleport(6, 3);
     const { X, Y } = labyrinth.checkPosition();
-
     expect(X).toEqual(6);
     expect(Y).toEqual(3);
   });
@@ -49,23 +47,23 @@ describe('Functionality tests', () => {
   });
 
   test('Moving into walls does not change players position', () => {
-    const { startX, startY } = labyrinth.checkPosition();
+    const startPos = labyrinth.checkPosition();
     labyrinth.move('up');
     labyrinth.move('up');
     labyrinth.move('up');
-    const { newX, newY } = labyrinth.checkPosition();
+    const newPos = labyrinth.checkPosition();
 
-    expect(newX).toEqual(startX);
-    expect(newY).toEqual(startY);
+    expect(newPos.X).toEqual(startPos.X);
+    expect(newPos.Y).toEqual(startPos.Y);
   });
 
   test('Teleporting into walls does not change players position', () => {
-    const { startX, startY } = labyrinth.checkPosition();
+    const startPos = labyrinth.checkPosition();
     labyrinth.teleport(2, 4);
-    const { newX, newY } = labyrinth.checkPosition();
+    const newPos = labyrinth.checkPosition();
 
-    expect(newX).toEqual(startX);
-    expect(newY).toEqual(startY);
+    expect(newPos.X).toEqual(startPos.X);
+    expect(newPos.Y).toEqual(startPos.Y);
   });
 });
 
